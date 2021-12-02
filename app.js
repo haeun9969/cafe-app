@@ -29,7 +29,7 @@ app.use(express.static(path.join(__dirname, 'app_public', 'build')));
 
 
 app.use('/api', (req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'http://localhost:4200');
+  res.header('Access-Control-Allow-Origin', 'https://loc8rhaeun.herokuapp.com');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, \
   Context-Type, Accept, Authorization');
   next();
