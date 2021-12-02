@@ -11,7 +11,7 @@ export class Loc8rDataService {
 
   constructor(private http: HttpClient) { }
 
-  private apiBaseUrl = 'http://haeun9969.herokuapp.com/api';
+  private apiBaseUrl = 'http://loc8rhaeun.herokuapp.com/api';
 
   public getLocations(lat: number, lng: number): Promise<Location[]> {
     // const lng: number = 127.1042488;
@@ -19,6 +19,7 @@ export class Loc8rDataService {
     const maxDistance: number = 20000;
     const url: string = `${this.apiBaseUrl}/locations?lng=${lng}&lat=${lat}&maxDistance=${maxDistance}`;
     return this.http
+    
       .get(url)
       .toPromise()
       .then(response => response as Location[])
