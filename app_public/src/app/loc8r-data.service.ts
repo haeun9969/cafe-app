@@ -17,7 +17,7 @@ export class Loc8rDataService {
     // const lng: number = 127.1042488;
     // const lat: number = 37.0056918;
     const maxDistance: number = 20000;
-    const url: string = `https://loc8rhaeun.herokuapp.com/api/locations?lng=${lng}&lat=${lat}&maxDistance=${maxDistance}`;
+    const url: string = `${this.apiBaseUrl}/locations?lng=${lng}&lat=${lat}&maxDistance=${maxDistance}`;
     return this.http
     
       .get(url)
