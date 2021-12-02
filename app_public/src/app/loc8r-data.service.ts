@@ -11,7 +11,7 @@ export class Loc8rDataService {
 
   constructor(private http: HttpClient) { }
 
-  private apiBaseUrl = 'http://loc8rhaeun.herokuapp.com/api';
+  private apiBaseUrl = 'https://loc8rhaeun.herokuapp.com/api';
 
   public getLocations(lat: number, lng: number): Promise<Location[]> {
     // const lng: number = 127.1042488;
