@@ -41,4 +41,6 @@ process.on('SIGTERM', () => {
     });
 });
 
-require('./locations'); // 7장 34p
+require('./locations');
+
+require('./users');
