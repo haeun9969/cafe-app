@@ -19,6 +19,8 @@ import { DetailsPageComponent } from './details-page/details-page.component';
 import { MostRecentFirstPipe } from './most-recent-first.pipe';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 RouterModule.forRoot([
   {
@@ -57,7 +59,13 @@ RouterModule.forRoot([
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the app is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
   providers: [],
   bootstrap: [FrameworkComponent]
