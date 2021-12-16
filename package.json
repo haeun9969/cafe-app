@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "icons": "pwa-asset-generator src/assets/icons/icon.png src/assets/icons --icon-only -i src/index.html -m src/manifest.webmanifest"
   },
   "engines": {
     "node": ">=14.17.6",
